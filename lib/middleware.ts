@@ -126,6 +126,9 @@ function handlePromise(dispatch, getState, action) {
 const middleware = function (client?: any): Middleware {
 
 	return ({ dispatch, getState }) => next => action => {
+		/**
+		 * handle async action
+		 */
 		if (typeof action === 'function') {
 			return action(dispatch, getState, client)
 		}
