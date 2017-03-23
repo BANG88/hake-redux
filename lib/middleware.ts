@@ -1,7 +1,5 @@
 import { MiddlewareAPI } from 'redux'
-
-const uuid = require('uuid')
-
+import * as uuid from 'uuid'
 import { KEY, LIFECYCLE } from './constants'
 
 import { HandleAction } from './handle'
