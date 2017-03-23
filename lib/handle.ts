@@ -1,5 +1,5 @@
-import deline from 'deline'
-import invariant from 'invariant'
+import * as deline from 'deline'
+import * as invariant from 'invariant'
 import { KEY, LIFECYCLE } from './constants'
 
 const VALID_KEYS = {
@@ -10,7 +10,7 @@ const VALID_KEYS = {
 	always: true,
 }
 
-function verifyHandlers(handlers: Handles, action: HandleAction) {
+function verifyHandlers(handlers: Handlers, action: Action) {
 	Object.keys(handlers).forEach(key => {
 		invariant(VALID_KEYS[key], deline`
       The handler for action ${action.type} had a ${key} property defined, but this is not
@@ -41,7 +41,7 @@ function safeMap(state, fn, action, name) {
 	}
 }
 export declare type HandleFn = (state?) => any
-export declare interface HandleAction {
+export declare interface Action {
 	type: string
 	promise?: PromiseLike<any>
 	meta?: {
@@ -54,7 +54,7 @@ export declare interface HandleAction {
 	[key: string]: any
 }
 
-export declare interface Handles {
+export declare interface Handlers {
 	/**
 	 * when an action start
 	 *
@@ -99,7 +99,7 @@ export declare interface Handles {
  * @param {Handles} handlers
  * @returns {any}
  */
-function handle(startingState: any, action: HandleAction, handlers: Handles) {
+function handle(startingState: any, action: Action, handlers: Handlers) {
 	if (process.env.NODE_ENV === 'development') {
 		verifyHandlers(handlers, action)
 	}

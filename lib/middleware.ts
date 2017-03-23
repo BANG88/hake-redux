@@ -2,7 +2,7 @@ import { MiddlewareAPI } from 'redux'
 import * as uuid from 'uuid'
 import { KEY, LIFECYCLE } from './constants'
 
-import { HandleAction } from './handle'
+import { Action } from './handle'
 /**
  * Dispatch
  *
@@ -11,7 +11,7 @@ import { HandleAction } from './handle'
  * @template S
  */
 export interface Dispatch<S> {
-	<A extends HandleAction>(action: A | null | Function): PromiseLike<S & {
+	<A extends Action>(action: A | null | Function): PromiseLike<S & {
 		type: string
 		meta: any
 		payload: any
