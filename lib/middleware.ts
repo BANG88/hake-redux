@@ -116,15 +116,12 @@ function handlePromise(dispatch, getState, action) {
 	// versus `.then(success).catch(failure)`
 	return promise.then(success, failure)
 }
-export declare interface Client {
-	(): (...args: any[]) => PromiseLike<any>,
-	[key: string]: PromiseLike<any>
-}
+
 /**
  * Redux Middleware
  * @param client A client lib like fetch,axios,etc.
  */
-const middleware = function (client?: Client): Middleware {
+const middleware = function (client?): Middleware {
 
 	return ({ dispatch, getState }) => next => action => {
 		/**

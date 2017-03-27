@@ -19,6 +19,7 @@
     ""
   ],
   "dependencies": {
+    "axios": "^0.15.3",
     "deline": "^1.0.4",
     "invariant": "^2.2.2",
     "tslib": "^1.6.0",

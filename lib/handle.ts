@@ -1,7 +1,7 @@
 import * as deline from 'deline'
 import * as invariant from 'invariant'
 import { KEY, LIFECYCLE } from './constants'
-import { Client } from './middleware'
+import { AxiosInstance } from 'axios'
 const VALID_KEYS = {
 	start: true,
 	success: true,
@@ -43,7 +43,7 @@ function safeMap(state, fn, action, name) {
 export declare type HandleFn = (state?) => any
 export declare interface Action {
 	type: string
-	promise?: Client | PromiseLike<any>
+	promise?: ((http: AxiosInstance) => PromiseLike<any>) | PromiseLike<any>
 	meta?: {
 		onStart?: (initialPayload?) => void
 		onFinish?: (boolean?) => void
