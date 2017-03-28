@@ -49,6 +49,7 @@ export declare interface Action {
 		onFinish?: (boolean?) => void
 		onSuccess?: (res?) => void
 		onFailure?: (err?) => void
+		startPayload?: any
 	}
 	payload?: any
 	[key: string]: any
