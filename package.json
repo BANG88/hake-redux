@@ -1,6 +1,6 @@
 {
   "name": "hake-redux",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A promise middleware for redux",
   "license": "MIT",
   "repository": "bang88/hake-redux",
