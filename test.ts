@@ -4,7 +4,7 @@ import middleware, { isPromise } from './index'
 const doDispatch = () => { }
 const doGetState = () => { }
 const store = { dispatch: doDispatch, getState: doGetState }
-const nextHandler = middleware()(store)
+const nextHandler = middleware()(store as any) as any
 const isFunction = fn => typeof fn === 'function'
 
 // some tests are come from redux-thunk

@@ -19,18 +19,18 @@
     ""
   ],
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.18.0",
     "deline": "^1.0.4",
-    "invariant": "^2.2.2",
-    "tslib": "^1.6.0",
-    "uuid": "^3.0.1"
+    "invariant": "^2.2.4",
+    "redux": "^3.7.2",
+    "tslib": "^1.9.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "@types/node": "^7.0.8",
-    "ava": "^0.18.2",
-    "redux": "^3.6.0",
-    "tslint": "^4.5.1",
-    "tslint-eslint-rules": "^3.5.1",
-    "typescript": "^2.2.1"
+    "@types/node": "^9.6.2",
+    "ava": "^0.25.0",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "typescript": "^2.8.1"
   }
 }
